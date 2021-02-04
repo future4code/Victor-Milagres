@@ -64,6 +64,7 @@ button{
     border: none;
 }
 
+
 /** Rodapé**/
 
 .rodape p{
@@ -82,6 +83,10 @@ button{
 /** Controle de Estoque**/
 .ms{
     margin-left: 15px;
+
+    color: #f7b600;
+
+
 }
 
 .menu-estoque{
@@ -117,4 +122,37 @@ button{
 .lista{
     margin-top: 15px;
     margin-left: 25px;
+
+}
+
+/** Vendas**/
+
+select{
+    margin: 15px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.botao-concluir{
+    padding: 10px;
+    background-color: #f7b600;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.logar{
+    padding: 0 15px;
+}
+
+/** Histórico vendas**/
+
+.historico{
+    margin: 15px;
+}
+
+.pesquisar{
+    padding: 5px;
+    background-color: #f7b600;
+    font-weight: bold;
+    cursor: pointer;
 }
