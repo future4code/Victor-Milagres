@@ -43,10 +43,15 @@ div>p:first-child {
     border-radius: 5px;
     font-size: 20px;
     color: white;
+    cursor: pointer;
 }
 
 .botao-amarelo:hover {
     background-color: #c44f00;
+}
+
+.botao-amarelo:active{
+    background-color: blue;
 }
 
 .container {
@@ -117,6 +122,7 @@ td button {
     height: 30px;
     border-radius: 5px;
     color: black;
+    cursor: pointer;
 }
 
 .container-do-search {
@@ -139,9 +145,14 @@ td button {
     border-radius: 5px;
     font-size: 10px;
     color: black;
+    cursor: pointer;
 
 }
 
 #back-button:hover {
     background-color: #635a3d
+}
+
+#back-button:active{
+    background-color: blue;
 }
