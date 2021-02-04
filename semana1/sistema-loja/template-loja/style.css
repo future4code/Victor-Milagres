@@ -83,7 +83,10 @@ button{
 /** Controle de Estoque**/
 .ms{
     margin-left: 15px;
+
     color: #f7b600;
+
+
 }
 
 .menu-estoque{
@@ -119,6 +122,7 @@ button{
 .lista{
     margin-top: 15px;
     margin-left: 25px;
+
 }
 
 /** Vendas**/
