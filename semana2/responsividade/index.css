@@ -1,0 +1,86 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+
+}
+
+div div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    margin: 5px;
+}
+
+main-container{
+    display: flex;
+    height: 100%;
+}
+
+div {
+    border: 1px solid black;
+}
+
+.conjunto{
+    display: grid;
+    grid-template-columns: repeat(3, 33.3%);
+}
+
+.black{
+    display: grid;
+    grid-template-columns: 50% 50%;
+
+}
+
+.white{
+    display: grid;
+    grid-template-columns: repeat(3, 33.3%);
+}
+
+#first-block {
+    background-color: red;
+    height: 80px;
+    flex-direction: row;
+
+}
+
+.blue-block {
+    background-color: blue;
+    height: 5rem;
+    
+}
+
+.yellow-block {
+    background-color: yellow;
+    height: 5rem;
+}
+
+.green-block {
+    background-color: green;
+    height: 5rem;
+    
+}
+
+.black-block {
+    background-color: black;
+    color: white;
+    height: 15rem;
+}
+
+.white-block {
+    background-color: white;
+    height: 5rem;
+}
+
+@media screen and (min-device-width: 320px) and (max-device-width: 420px){
+}
+
+@media screen and (min-device-width: 421px) and (max-device-width: 800px){
+    /*Tablets*/
+}
+
+@media screen and (min-device-width: 1200px){
+    /*computadores*/
+}
