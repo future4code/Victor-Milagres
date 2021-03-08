@@ -26,33 +26,27 @@ return elevado
 
 //Exercício 3
 
-function retornaNumerosPares (array) {
-   // implemente sua lógica aqui
-const arrayOriginal = [100, 205, 280, 80, 52, 43, 25, 505, 10]
-const newArray = []
-for(let i = 0; i < arrayOriginal.length; i++){
-    if(arrayOriginal[i] % 2 === 0){
-        newArray.push(arrayOriginal[i])
-    }
-    return newArray
-}
-
-
-}
+function retornaNumerosPares(array) {
+   let novoArray = [];
+   for(let i = 0; i < array.length; i++) {
+   if(array[i] % 2 === 0) {
+         novoArray.push(array[i])
+       }
+     }
+   return novoArray
+   }
 
 //Exercício 4
 
 function retornaMaiorNumero(array) {
-   // implemente sua lógica aqui
-   const lista = [100, 11, 12, 15, 18, 59, 21, 23, 25, 27, 30]
-   let maiorNumero = 0
-   for(let numero of lista){
-     if(numero > maiorNumero){
-        maiorNumero = numero 
+   let maiorNumero = array[0];
+   for(let i = 0; i < array.length; i++) {
+   if(maiorNumero < array[i]) {
+         maiorNumero = array[i]
+       }
      }
-     console.log(maiorNumero)
-  }
-}
+   return maiorNumero
+   }
 
 //Exercício 5
 const array = [10, 23, 45, 78, 90, 52, 35, 67, 84, 22]
@@ -71,39 +65,89 @@ function retornaExpressoesBooleanas() {
 //Exercício 7
 
 function retornaNNumerosPares(n) {
-   // implemente sua lógica aqui
-   const array = [];
-   for(let i = 0; array.length < n; i++) {
-    if(i % 2 === 0) {
-      array.push(number)
+   const novoArray = [];
+   for(let number = 0; novoArray.length < n; number++) {
+    if(number % 2 === 0) {
+      novoArray.push(number)
     }
    }
-   return array
-}
+   return novoArray
+  }
 
 // Exercício 8
 
 function checaTriangulo(a, b, c) {
-
-  if ( a === b && b === c){
-  return "Triângulo Equilátero";      
-}else if(a !== b && b !== c && c !== a){
-   return "Triângulo Escaleno!"; 
-}else{
-   return "Triângulo Isósceles";
-   }
-}
+   if(a !== b && b !== c) {
+    return'Escaleno'
+   } else if(a === b && b === c) {
+     return'Equilátero'
+    } else {
+      return'Isósceles'
+    }
+  }
 // Exercício 9
 
 function comparaDoisNumeros(num1, num2) {
-   // implemente sua lógica aqui
-}
+   let maiorNumero;
+   let menorNumero;
+   let maiorDivisivelporMenor;
+  
+   if(num1 > num2) {
+      maiorNumero = num1;
+      menorNumero = num2;
+   } else {
+      maiorNumero = num2;
+      menorNumero = num1;
+    }
+  
+    maiorDivisivelporMenor = maiorNumero % menorNumero === 0;
+  
+    const diferenca = maiorNumero - menorNumero;
+  
+    return {
+      maiorNumero: maiorNumero,
+      maiorDivisivelporMenor: maiorDivisivelporMenor,
+      diferenca: diferenca
+    }
+  }
 
 // Exercício 10
 
 function segundoMaiorEMenor(array) {
-   // implemente sua lógica aqui
-}
+   let menor = Infinity
+   let maior = 0
+   let segundoMenor = Infinity
+   let segundoMaior = 0
+   let indiceMenor = 0
+   let indiceMaior = 0
+   let novoArray = []
+  
+   for(let i of array) {
+    if(i < menor) {
+       menor = i
+       indiceMenor = array.indexOf(menor)
+    } 
+    if(i > maior) {
+       maior = i
+       indiceMaior = array.indexOf(maior)
+       }
+    }
+     array.splice(indiceMaior, 1)
+     array.splice(indiceMenor, 1)
+  
+    for(let i of array) {
+     if(i < segundoMenor) {
+       segundoMenor = i
+    }
+    if(i > segundoMaior) {
+       segundoMaior = i
+    }
+   }
+    novoArray.push(segundoMaior)
+    novoArray.push(segundoMenor)
+  
+    return novoArray
+  }
 
 //Exercício 11
 
@@ -138,6 +182,7 @@ function filmeFavorito() {
 
 function imprimeChamada() {
    // implemente sua lógica aqui
+   
   
 }
 
@@ -184,32 +229,52 @@ const arrayDePessoas = [
 // Exercício 16, letra A
 
 function maioresDe18(arrayDePessoas) {
-   // implemente sua lógica aqui
-}
+   const novoArray = arrayDePessoas.filter((pessoa) => {
+    return pessoa.idade >= 18
+   })
+   return novoArray
+  }
 
 // Exercício 16, letra B
 
 function menoresDe18(arrayDePessoas) {
-   // implemente sua lógica aqui
-}
+   const novoArray = arrayDePessoas.filter((pessoa) => {
+    return pessoa.idade < 18
+    })
+   return novoArray
+   }
 
 // Exercício 17, letra A
 
 function multiplicaArrayPor2(array) {
-   // implemente sua lógica aqui
-}
+   const novoArray = array.map((num) => {
+    return num * 2
+    })
+   return novoArray
+  }
 
 // Exercício 17, letra B
 
 function multiplicaArrayPor2S(array) {
-  // implemente sua lógica aqui
-}
+   const novoArray = array.map((num) => {
+    return(num * 2).toString()
+    })
+   return novoArray
+  }
 
 // Exercício 17, letra C
 
 function verificaParidade(array) {
-   // implemente sua lógica aqui
-}
+   const novoArray = array.map((num) => {
+     if (num % 2 === 0) {
+       return `${num} é par`
+     } else {
+       return `${num} é ímpar`
+     }
+   })
+ 
+   return novoArray
+ }
 
 // Exercício 18
 
@@ -224,16 +289,29 @@ const pessoas = [
 
 //Exercício 18, letra A
 
-function retornaPessoasAutorizadas(pessoas) {
-   // implemente sua lógica aqui
-}
+function retornaPessoasAutorizadas() {
+
+   let pessoasAutorizadas = [];
+   for(const pessoa of pessoas) {
+     if(pessoa.altura >= 1.5 && pessoa.idade > 14 && pessoa.idade < 60) {
+       pessoasAutorizadas.push(pessoa)
+     }
+   }
+   return pessoasAutorizadas;
+ }
 
 
 // Exercício 18, letra B
 
-function retornaPessoasNaoAutorizadas(pessoas) {
-   // implemente sua lógica aqui
-}
+function retornaPessoasNaoAutorizadas() {
+   let pessoasNaoAutorizadas = [];
+   for(const pessoa of pessoas) {
+     if(pessoa.altura < 1.5 || pessoa.idade < 14 || pessoa.idade > 60) {
+       pessoasNaoAutorizadas.push(pessoa)
+     }
+   }
+   return pessoasNaoAutorizadas;
+ }
 
 //Exercício 19
 
@@ -244,9 +322,43 @@ const consultas = [
   { nome: "Márcia", genero: "feminino", cancelada: false, dataDaConsulta: "04/11/2019" }
   ]
 
-function retornaEmailConsulta(consultas) {
-  // implemente sua lógica aqui
-}
+  function retornaEmailConsulta() {
+   return consultas.map((consulta) => {
+     let emailFinal = "Olá, "
+ 
+     if (!consulta.cancelada) {
+       if (consulta.genero === "feminino") {
+         emailFinal += "Sra. "
+       } else {
+         emailFinal += "Sr. "
+       }
+ 
+       emailFinal += consulta.nome + ". "
+       emailFinal += "Estamos enviando esta mensagem para "
+ 
+       if (consulta.genero === "feminino") {
+         emailFinal += "lembrá-la "
+       } else {
+         emailFinal += "lembrá-lo "
+       }
+ 
+       emailFinal += "da sua consulta no dia " + consulta.dataDaConsulta + ". "
+       emailFinal += "Por favor, acuse o recebimento deste-email."
+     } else {
+       if (consulta.genero === "feminino") {
+         emailFinal += "Sra. "
+       } else {
+         emailFinal += "Sr. "
+       }
+ 
+       emailFinal += consulta.nome + ". "
+       emailFinal += "Infelizmente sua consulta marcada para o dia "
+       emailFinal += consulta.dataDaConsulta + " foi cancelada. "
+       emailFinal += "Se quiser, pode entrar em contato conosco para remarcá-la."
+     }
+     return emailFinal
+   });
+ }
 
 //Exercício 20
 
