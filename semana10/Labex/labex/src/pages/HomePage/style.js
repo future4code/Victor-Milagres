@@ -5,19 +5,27 @@ export const ContainerHome = styled.div `
  text-align: center;
  font-size: 50px;
  max-width: 800px;
+ 
+ h1:hover{
+     color:#eb3a34;
+ }
 
  p {
      font-size: 20px;
      margin-top: 20px;
  }
 
- img { padding-top: 50px;}
+ p:hover{
+    color:#eb3a34;
+ }
+
+ img { padding-top: 70px;}
 `
 
 export const ButtonsContainer = styled.div`
-    width: 400px;
+    width: 600px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 `
 
 export const Button = styled.button `

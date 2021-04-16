@@ -1,1 +1,1 @@
-export const BASE_URL = "https://us-central1-labenu-apis.cloudfunctions.net/labeX/victor-milagres-cruz"
+export const BASE_URL = "https://us-central1-labenu-apis.cloudfunctions.net/labeX/victor"

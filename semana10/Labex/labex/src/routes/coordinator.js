@@ -23,5 +23,5 @@ export const goToCreateTripPage = (history) => {
 }
 
 export const goToTripDetailsPage = (history, id) => {
-    history.push("/admin/trips/:id")
+    history.push(`/admin/trips/${id}`)
 }

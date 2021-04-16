@@ -12,7 +12,7 @@ const HomePage = () => {
         <ContainerHome>
             <h1>LabeX</h1>
             <p>Encontre as melhores viagens espaciais!</p>
-            <img src={foguete}></img>
+            <img src={foguete}/>
             <ButtonsContainer>
                 <Button onClick={() => goToListTripsPage(history)}>Quero Viajar!</Button>
                 <Button onClick={() => goToLoginPage(history)}>Login</Button>
