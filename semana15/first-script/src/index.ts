@@ -109,10 +109,9 @@ function buscarPostsPorAutor(posts:Posts[], autorInformado:string) {
         return post.autor === autorInformado
       }
     )
-  }
-
+}
+  console.table(buscarPostsPorAutor(posts,"Dobby"))
 //Exercicio 4 
 //a) aplicar o comando tsc na pasta local  
 //b) teria que acessar o diretorio e usar o tsc
 //c) Sim. Podemos usar o comando tsc com o nome do arquivo.
-
